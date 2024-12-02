@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comprehensive Climate Action Awareness - Understand, Act, and Protect our Future.">
+    <meta name="keywords" content="climate action, climate change, global warming, sustainability, environment">
+    <meta name="author" content="Climate Action Team">
+    <title>Climate Action Awareness</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #2e3b47;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #34495e;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 15px;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: #2980b9;
+            border-radius: 5px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: #27ae60;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 3.5em;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-top: 10px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Button Style */
+        .btn {
+            background-color: #2980b9;
+            color: white;
+            padding: 12px 24px;
+            text-align: center;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #1d6f8f;
+        }
+
+        /* Content Toggle Section */
+        .toggle-content {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #ecf0f1;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .toggle-content p {
+            font-size: 1.1em;
+            color: #2c3e50;
+        }
+
+        /* About Section */
+        #about {
+            background-color: #ecf0f1;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        #about h2 {
+            color: #2c3e50;
+            font-size: 2.5em;
+        }
+
+        #about p {
+            font-size: 1.2em;
+            max-width: 1000px;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+
+        /* Statistics Section */
+        #stats {
+            background-color: #ffffff;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        #stats h2 {
+            font-size: 2.5em;
+            color: #2980b9;
+        }
+
+        #stats .stat-box {
+            display: inline-block;
+            width: 30%;
+            margin: 10px;
+            padding: 40px;
+            background-color: #f1f1f1;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #stats .stat-box h3 {
+            font-size: 2.5em;
+            color: #e74c3c;
+        }
+
+        #stats .stat-box p {
+            font-size: 1.1em;
+            color: #7f8c8d;
+        }
+
+        /* Action Section */
+        #actions {
+            background-color: #f39c12;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        #actions h2 {
+            color: white;
+            font-size: 2.5em;
+        }
+
+        #actions .action-box {
+            display: inline-block;
+            width: 28%;
+            margin: 20px;
+            background-color: #34495e;
+            color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        #actions .action-box:hover {
+            transform: scale(1.05);
+        }
+
+        #actions .action-box h3 {
+            font-size: 2em;
+            color: #f39c12;
+        }
+
+        #actions .action-box p {
+            font-size: 1.1em;
+        }
+
+        /* Resources Section */
+        #resources {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #ecf0f1;
+        }
+
+        #resources h2 {
+            font-size: 2.5em;
+            color: #2980b9;
+        }
+
+        #resources ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #resources ul li {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        #resources ul li a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+
+        #resources ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Contact Section */
+        #contact {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #2c3e50;
+            color: white;
+        }
+
+        #contact h2 {
+            font-size: 2.5em;
+        }
+
+        #contact p {
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+
+        footer {
+            background-color: #34495e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #ecf0f1;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Climate Action Awareness</h1>
+    <p>Understand, Act, and Protect our Future - Join the Global Movement for Climate Change Action!</p>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#stats">Statistics</a>
+    <a href="#actions">Take Action</a>
+    <a href="#resources">Resources</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section class="hero">
+    <h2>Climate Change is Real - Act Now!</h2>
+    <p>Climate change is one of the most pressing issues of our time. From rising global temperatures to extreme weather events, our planet is undergoing rapid changes. But it’s not too late to make a difference. Learn how you can help mitigate the effects of climate change and protect future generations.</p>
+    <button class="btn" onclick="toggleContent('hero-content')">Learn More</button>
+    <div class="toggle-content" id="hero-content">
+        <p>In this section, we discuss how humans are accelerating climate change through deforestation, industrial emissions, and urbanization, and what immediate actions we can take to reduce our carbon footprint and prevent further damage.</p>
+    </div>
+</section>
+
+<section id="about">
+    <h2>What is Climate Change?</h2>
+    <p>Climate change refers to long-term shifts in temperature, weather patterns, and other atmospheric conditions on Earth. It is primarily caused by human activities, such as burning fossil fuels for energy, deforestation, and industrial practices that release harmful greenhouse gases into the atmosphere.</p>
+    <button class="btn" onclick="toggleContent('about-content')">Read More</button>
+    <div class="toggle-content" id="about-content">
+        <p>These activities are leading to global warming, which is causing ice caps to melt, sea levels to rise, and more frequent and severe weather events like hurricanes, floods, and droughts. The impact is devastating for biodiversity, food security, and human health.</p>
+    </div>
+</section>
+
+<section id="stats">
+    <h2>Climate Change Statistics</h2>
+    <div class="stat-box">
+        <h3>1.2°C</h3>
+        <p>Global average temperature has increased by 1.2°C since pre-industrial times.</p>
+    </div>
+    <div class="stat-box">
+        <h3>40%</h3>
+        <p>Carbon dioxide levels in the atmosphere have increased by 40% since 1850.</p>
+    </div>
+    <div class="stat-box">
+        <h3>20%</h3>
+        <p>More than 20% of coral reefs have been destroyed due to rising ocean temperatures.</p>
+    </div>
+</section>
+
+<section id="actions">
+    <h2>How You Can Make a Difference</h2>
+    <button class="btn" onclick="toggleContent('actions-content')">Take Action</button>
+    <div class="toggle-content" id="actions-content">
+        <p>Start by reducing your personal carbon footprint. This includes using public transport, recycling, supporting sustainable companies, and minimizing single-use plastics. Together, small changes make a huge difference!</p>
+    </div>
+</section>
+
+<section id="resources">
+    <h2>Resources</h2>
+    <ul>
+        <li><a href="#">Global Climate Action Portal</a></li>
+        <li><a href="#">UN Climate Change Reports</a></li>
+        <li><a href="#">Sustainable Living Guide</a></li>
+        <li><a href="#">How to Get Involved with Local Initiatives</a></li>
+    </ul>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>If you have any questions or want to learn more about how you can take action, reach out to us!</p>
+    <button class="btn" onclick="toggleContent('contact-form')">Contact Form</button>
+    <div class="toggle-content" id="contact-form">
+        <form action="#">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</section>
+
+<footer>
+    <p>© 2024 Climate Action Awareness. All Rights Reserved. <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+</footer>
+
+<script>
+    // Function to toggle the visibility of the content
+    function toggleContent(id) {
+        var content = document.getElementById(id);
+        if (content.style.display === "none" || content.style.display === "") {
+            content.style.display = "block";
+        } else {
+            content.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>
